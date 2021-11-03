@@ -38,6 +38,8 @@ local tableinsert = table.insert
 getgenv().Aiming = {
     Enabled = true,
     
+    Color = Color3fromRGB(255,149,128)
+    
     VisibleCheck = true,
 
     Selected = nil,
@@ -79,7 +81,7 @@ function Aiming.UpdateFOV()
     circle.Radius = (_G.Fov * 3)
     circle.Position = Vector2new(Mouse.X, Mouse.Y + GetGuiInset(GuiService).Y)
     circle.NumSides = _G.Sides
-    circle.Color = _G.RGB
+    circle.Color = Aiming.Color
 
     -- // Return circle
     return circle
