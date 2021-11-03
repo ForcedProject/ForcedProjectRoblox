@@ -61,7 +61,6 @@ getgenv().Aiming = {
         },
         Players = {
             LocalPlayer,
-            91318356
         }
     }
 }
@@ -83,11 +82,11 @@ function Aiming.UpdateFOV()
     end
 
     -- // Set Circle Properties
-    circle.Visible = Aiming.ShowFOV
-    circle.Radius = (Aiming.FOV * 3)
+    circle.Visible = _G.ShowFov
+    circle.Radius = (_G.Fov * 3)
     circle.Position = Vector2new(Mouse.X, Mouse.Y + GetGuiInset(GuiService).Y)
-    circle.NumSides = Aiming.FOVSides
-    circle.Color = Aiming.FOVColour
+    circle.NumSides = _G.Sides
+    circle.Color = _G.RGB
 
     -- // Return circle
     return circle
@@ -387,7 +386,7 @@ function Aiming.GetClosestPlayerToCursor()
     -- // Vars
     local TargetPart = nil
     local ClosestPlayer = nil
-    local Chance = CalcChance(Aiming.HitChance)
+    local Chance = CalcChance(_G.HitChance)
     local ShortestDistance = 1/0
 
     -- // Chance
