@@ -1,9 +1,5 @@
 -- // Dependencies
-if _G.Visible == true then
-    local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/ForcedProject/ForcedProjectRoblox/main/VisibleConfig.lua"))()
-    else
-    local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/ForcedProject/ForcedProjectRoblox/main/InvisibleConfig.lua"))()
-    end
+    local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/ForcedProject/ForcedProjectRoblox/main/Aimbot.lua"))()
 Aiming.TeamCheck(false)
 
 -- // Services
