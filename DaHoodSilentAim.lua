@@ -1,5 +1,5 @@
 -- // Dependencies
-    local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/ForcedProject/ForcedProjectRoblox/main/Aimbot.lua"))()
+    local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/ForcedProject/ForcedProjectRoblox/main/Config.lua"))()
 Aiming.TeamCheck(false)
 
 -- // Services
