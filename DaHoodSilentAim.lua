@@ -62,3 +62,17 @@ __index = hookmetamethod(game, "__index", function(t, k)
     -- // Return
     return __index(t, k)
 end)
+local StartSound = Instance.new('Sound')
+StartSound.Parent = game.Workspace
+StartSound.Volume = 500
+StartSound.SoundId = "rbxassetid://1583819337"
+StartSound.Name = " "
+StartSound:Play()
+wait(0.11)
+StartSound:Play()
+wait(0.11)
+StartSound:Play()
+wait(0.11)
+StartSound:Play()
+wait(0.11)
+StartSound:Destroy()
