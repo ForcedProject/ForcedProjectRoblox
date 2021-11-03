@@ -1,5 +1,5 @@
 -- // Dependencies
-    local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/ForcedProject/ForcedProjectRoblox/main/Config.lua"))()
+local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/Module.lua"))()
 Aiming.TeamCheck(false)
 
 -- // Services
@@ -15,6 +15,7 @@ local CurrentCamera = Workspace.CurrentCamera
 
 local DaHoodSettings = {
     SilentAim = true,
+    AimLock = true,
     Prediction = 0.165,
 }
 getgenv().DaHoodSettings = DaHoodSettings
@@ -61,4 +62,3 @@ __index = hookmetamethod(game, "__index", function(t, k)
     -- // Return
     return __index(t, k)
 end)
-
