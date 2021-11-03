@@ -35,18 +35,23 @@ local FindFirstChild = Instancenew("Part").FindFirstChild
 local tableremove = table.remove
 local tableinsert = table.insert
 
--- // Silent Aim Vars
-getgenv().Aiming = {
-    Enabled = true,
-
-    ShowFOV = true,
+-- // Updater
+local function Vars()
+    while wait(0.05) do
+    Enabled = _G.Enabled,
+    ShowFOV = _G.ShowFov,
     FOV = _G.Fov,
     FOVSides = _G.Sides,
-    FOVColour = Color3fromRGB(77,106,255),
-
-    VisibleCheck = true,
-    
+    FOVColour = Color3fromRGB(_G.RGB),
     HitChance = _G.HitChance,
+        end
+    end
+
+-- // Silent Aim Vars
+getgenv().Aiming = {
+    spawn(Vars)
+    
+    VisibleCheck = true,
 
     Selected = nil,
     SelectedPart = nil,
@@ -62,7 +67,6 @@ getgenv().Aiming = {
         },
         Players = {
             LocalPlayer,
-            91318356
         }
     }
 }
