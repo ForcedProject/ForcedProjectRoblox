@@ -67,8 +67,12 @@ local Aiming = getgenv().Aiming
 
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
-        if input.KeyCode == Enum.KeyCode.RightShift then
-            print "fat stinky ape"
+        if input.KeyCode == Enum.KeyCode.RightAlt then
+            if Aiming.Enabled == true then
+                Aiming.Enabled = false
+                else
+                Aiming.Enabled = true
+                end
             end
         end)
 
