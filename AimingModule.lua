@@ -66,11 +66,9 @@ getgenv().Aiming = {
 local Aiming = getgenv().Aiming
 
 
-game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
- if key == "RightShift" then
-                      print 'fat stinky nigger'
- end
-end)
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+        print(input)
+        end)
 
 
 -- // Create circle
