@@ -1,3 +1,4 @@
+_G.En = true
 if getgenv().Aiming then return getgenv().Aiming end
 
 -- // Services
@@ -35,7 +36,7 @@ local tableinsert = table.insert
 
 -- // Silent Aim Vars
 getgenv().Aiming = {
-    Enabled = true,
+    Enabled = _G.En,
 
     ShowFOV = _G.ShowFov,
     FOV = _G.Fov,
@@ -68,10 +69,10 @@ local Aiming = getgenv().Aiming
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
         if input.KeyCode == Enum.KeyCode.RightAlt then
-            if Aiming.Enabled == true then
-                Aiming.Enabled = false
+            if _G.En == true then
+                _G.En = false
                 else
-                Aiming.Enabled = true
+                _G.En = true
                 end
             end
         end)
