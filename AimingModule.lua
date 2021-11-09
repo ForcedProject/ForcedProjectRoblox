@@ -69,6 +69,7 @@ local Aiming = getgenv().Aiming
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
         if input.KeyCode == Enum.KeyCode.RightAlt then
+             print("toggled")
             if _G.En == true then
                 _G.En = false
                 else
