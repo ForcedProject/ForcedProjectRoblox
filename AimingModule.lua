@@ -67,7 +67,7 @@ local Aiming = getgenv().Aiming
 
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
-        print(input)
+        print(input.KeyCode)
         end)
 
 
