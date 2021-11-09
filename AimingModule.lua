@@ -1,4 +1,3 @@
-_G.En = true
 if getgenv().Aiming then return getgenv().Aiming end
 
 -- // Services
@@ -36,7 +35,7 @@ local tableinsert = table.insert
 
 -- // Silent Aim Vars
 getgenv().Aiming = {
-    Enabled = _G.En,
+    Enabled = true,
 
     ShowFOV = _G.ShowFov,
     FOV = _G.Fov,
@@ -65,18 +64,6 @@ getgenv().Aiming = {
     }
 }
 local Aiming = getgenv().Aiming
-
-
-game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
-        if input.KeyCode == Enum.KeyCode.RightAlt then
-             print("toggled")
-            if _G.En == true then
-                _G.En = false
-                else
-                _G.En = true
-                end
-            end
-        end)
 
 
 -- // Create circle
@@ -443,7 +430,6 @@ end
 
 -- // Heartbeat Function
 Heartbeat:Connect(function()
-    Aiming.Check()
     Aiming.UpdateFOV()
     Aiming.GetClosestPlayerToCursor()
 end)
