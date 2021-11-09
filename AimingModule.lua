@@ -441,6 +441,7 @@ end
 
 -- // Heartbeat Function
 Heartbeat:Connect(function()
+    Aiming.Check()
     Aiming.UpdateFOV()
     Aiming.GetClosestPlayerToCursor()
 end)
