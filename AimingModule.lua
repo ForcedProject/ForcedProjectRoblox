@@ -67,7 +67,9 @@ local Aiming = getgenv().Aiming
 
 
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
-        print(input.KeyCode)
+        if input.KeyCode == Enum.KeyCode.RightShift then
+            print "fat stinky ape"
+            end
         end)
 
 
