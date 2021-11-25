@@ -1,6 +1,6 @@
 _G.ShowFOV = false
 _G.Fov = 50
-_G.Sides = 50
+_G.Sides = 25
 _G.HitChance = 100
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/ForcedProject/ForcedProjectRoblox/main/AimingModule.lua"))()
 Aiming.TeamCheck(false)
