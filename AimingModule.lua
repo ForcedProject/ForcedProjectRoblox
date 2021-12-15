@@ -1,3 +1,4 @@
+--Not pasted but I did learn via source so the variables are the same
 if getgenv().Aiming then return getgenv().Aiming end
 local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
